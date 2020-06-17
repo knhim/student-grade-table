@@ -11,7 +11,7 @@ class GradeTable {
       tbody.append(this.renderGradeRow(grades[i], this.deleteGrade));
     }
 
-    if (grades < 1) {
+    if (grades.length < 1) {
       this.noGradesElement.className = '';
     } else {
       this.noGradesElement.className = 'd-none';
