@@ -4,6 +4,7 @@ class App {
     this.handleGetGradesError = this.handleGetGradesError.bind(this);
     this.gradeTable = gradeTable;
     this.pageHeader = pageHeader;
+
   }
 
   handleGetGradesError(error) {
@@ -12,8 +13,14 @@ class App {
 
   handleGetGradesSuccess(grades) {
     this.gradeTable.updateGrades(grades);
+    var average = 0;
+    var total = 0;
+    for (var i = 0; i < grades.length; i++) {
+      total += grades[i].grade;
+      average = Math.floor(total / grades.length);
+    }
+    this.pageHeader.updateAverage(average);
   }
-
 
 
   getGrades() {

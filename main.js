@@ -8,5 +8,5 @@ var pageHeader = new PageHeader(headerEle);
 
 
 
-var app = new App(gradeTable);
+var app = new App(gradeTable, pageHeader);
 app.start();

@@ -4,6 +4,7 @@ class PageHeader {
   }
 
   updateAverage(newAverage) {
-    console.log(newAverage);
+    var badgeEle = this.headerElement.querySelector('span');
+    badgeEle.textContent = newAverage;
   }
 }
