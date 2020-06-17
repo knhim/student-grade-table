@@ -5,8 +5,10 @@ var gradeTable = new GradeTable(tableEle);
 var headerEle = document.querySelector('header');
 var pageHeader = new PageHeader(headerEle);
 
+//queried the document for the form element, and instantiated GradeForm
+var formElem = document.querySelector('form');
+var gradeForm = new GradeForm(formElem);
 
 
-
-var app = new App(gradeTable, pageHeader);
+var app = new App(gradeTable, pageHeader, gradeForm);
 app.start();
