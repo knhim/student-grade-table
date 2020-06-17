@@ -43,6 +43,7 @@ class App {
     this.gradeForm.onSubmit(this.createGrade)
   }
 
+  //methods to create grades
   createGrade(name, course, grade) {
     console.log(name, course, grade);
     $.ajax({
@@ -67,4 +68,16 @@ class App {
     this.getGrades();
   }
 
+  //methods to delete grades
+  deleteGrade(id) {
+    console.log(id);
+  }
+
+  handleDeleteGradeError(error) {
+    console.error(error);
+  }
+
+  handleDeleteGradeSuccess() {
+    this.getGrades();
+  }
 }
