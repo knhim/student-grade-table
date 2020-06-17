@@ -37,8 +37,10 @@ class App {
       error: this.handleGetGradesError
     })
   }
+
   start() {
     this.getGrades();
+    this.gradeForm.onSubmit(this.createGrade)
   }
 
   createGrade(name, course, grade) {
