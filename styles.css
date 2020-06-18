@@ -1,0 +1,19 @@
+
+@media (max-width: 600px) {
+  body {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .mobile {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+
+  }
+
+  .mobile-row-2 {
+    display: flex;
+    max-width: 100%;
+  }
+}
