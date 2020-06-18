@@ -1,5 +1,6 @@
+var pEle = document.querySelector('p');
 var tableEle = document.querySelector('table');
-var gradeTable = new GradeTable(tableEle);
+var gradeTable = new GradeTable(tableEle, pEle);
 
 //set header element to a variable , and created a new pageheader object w/headerEle as an argument
 var headerEle = document.querySelector('header');
