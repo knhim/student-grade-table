@@ -21,9 +21,9 @@ class App {
 
   handleGetGradesSuccess(grades) {
     this.gradeTable.updateGrades(grades);
-    var average = 0;
-    var total = 0;
-    for (var i = 0; i < grades.length; i++) {
+    let average = 0;
+    let total = 0;
+    for (let i = 0; i < grades.length; i++) {
       total += grades[i].grade;
       average = Math.floor(total / grades.length);
     }
