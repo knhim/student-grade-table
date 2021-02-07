@@ -5,9 +5,9 @@ class GradeTable {
   }
 
   updateGrades(grades) {
-    var tbody = document.querySelector('tbody');
+    const tbody = document.querySelector('tbody');
     tbody.textContent = '';
-    for (var i = 0; i < grades.length; i++) {
+    for (let i = 0; i < grades.length; i++) {
       tbody.append(this.renderGradeRow(grades[i], this.deleteGrade));
     }
 
@@ -19,12 +19,12 @@ class GradeTable {
   }
 
   renderGradeRow(data, deleteGrade) {
-    var trElement = document.createElement('tr')
-    var tdName = document.createElement('td');
-    var tdCourseName = document.createElement('td');
-    var tdStudentGrade = document.createElement('td');
-    var tdDelete = document.createElement('td');
-    var deleteButton = document.createElement('button');
+    const trElement = document.createElement('tr')
+    const tdName = document.createElement('td');
+    const tdCourseName = document.createElement('td');
+    const tdStudentGrade = document.createElement('td');
+    const tdDelete = document.createElement('td');
+    const deleteButton = document.createElement('button');
 
     deleteButton.className = 'btn btn-danger'
     tdName.textContent = data.name;
@@ -35,7 +35,7 @@ class GradeTable {
     trElement.append(tdName, tdCourseName, tdStudentGrade, tdDelete);
 
     deleteButton.textContent = "DELETE";
-    deleteButton.addEventListener('click', function () {
+    deleteButton.addEventListener('click', () => {
       deleteGrade(data.id);
     });
     return trElement;

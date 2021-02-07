@@ -21,9 +21,9 @@ class App {
 
   handleGetGradesSuccess(grades) {
     this.gradeTable.updateGrades(grades);
-    var average = 0;
-    var total = 0;
-    for (var i = 0; i < grades.length; i++) {
+    let average = 0;
+    let total = 0;
+    for (let i = 0; i < grades.length; i++) {
       total += grades[i].grade;
       average = Math.floor(total / grades.length);
     }
@@ -49,7 +49,6 @@ class App {
 
   //methods to create grades
   createGrade(name, course, grade) {
-    console.log(name, course, grade);
     $.ajax({
       method: "POST",
       url: "https://sgt.lfzprototypes.com/api/grades",
